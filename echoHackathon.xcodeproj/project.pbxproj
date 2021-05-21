@@ -13,6 +13,18 @@
 		70BE63AF2657729600F2678F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BE63AD2657729600F2678F /* Main.storyboard */; };
 		70BE63B12657729900F2678F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BE63B02657729900F2678F /* Assets.xcassets */; };
 		70BE63B42657729900F2678F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BE63B22657729900F2678F /* LaunchScreen.storyboard */; };
+		70BE63BD265788D000F2678F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63BC265788D000F2678F /* MapViewController.swift */; };
+		70BE63C026578E2200F2678F /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63BF26578E2200F2678F /* NavigationViewController.swift */; };
+		70BE63CC2657915300F2678F /* ModeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63CA2657915300F2678F /* ModeCVC.swift */; };
+		70BE63CD2657915300F2678F /* ModeCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70BE63CB2657915300F2678F /* ModeCVC.xib */; };
+		70BE63D12657917F00F2678F /* ElectronicTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63CF2657917F00F2678F /* ElectronicTVC.swift */; };
+		70BE63D22657917F00F2678F /* ElectronicTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70BE63D02657917F00F2678F /* ElectronicTVC.xib */; };
+		70BE63D92657983B00F2678F /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70BE63D62657983B00F2678F /* Font Awesome 5 Free-Solid-900.otf */; };
+		70BE63DA2657983B00F2678F /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70BE63D72657983B00F2678F /* Font Awesome 5 Brands-Regular-400.otf */; };
+		70BE63DB2657983B00F2678F /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = 70BE63D82657983B00F2678F /* Font Awesome 5 Free-Regular-400.otf */; };
+		70BE63DF2657A29A00F2678F /* ElectronicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63DE2657A29A00F2678F /* ElectronicModel.swift */; };
+		70BE63E32657D7C500F2678F /* ModeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63E22657D7C400F2678F /* ModeModel.swift */; };
+		70BE63E72657F20E00F2678F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63E62657F20E00F2678F /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +36,18 @@
 		70BE63B02657729900F2678F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70BE63B32657729900F2678F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70BE63B52657729900F2678F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70BE63BC265788D000F2678F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		70BE63BF26578E2200F2678F /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		70BE63CA2657915300F2678F /* ModeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeCVC.swift; sourceTree = "<group>"; };
+		70BE63CB2657915300F2678F /* ModeCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModeCVC.xib; sourceTree = "<group>"; };
+		70BE63CF2657917F00F2678F /* ElectronicTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectronicTVC.swift; sourceTree = "<group>"; };
+		70BE63D02657917F00F2678F /* ElectronicTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ElectronicTVC.xib; sourceTree = "<group>"; };
+		70BE63D62657983B00F2678F /* Font Awesome 5 Free-Solid-900.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Solid-900.otf"; sourceTree = "<group>"; };
+		70BE63D72657983B00F2678F /* Font Awesome 5 Brands-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Brands-Regular-400.otf"; sourceTree = "<group>"; };
+		70BE63D82657983B00F2678F /* Font Awesome 5 Free-Regular-400.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Font Awesome 5 Free-Regular-400.otf"; sourceTree = "<group>"; };
+		70BE63DE2657A29A00F2678F /* ElectronicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectronicModel.swift; sourceTree = "<group>"; };
+		70BE63E22657D7C400F2678F /* ModeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeModel.swift; sourceTree = "<group>"; };
+		70BE63E62657F20E00F2678F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +80,91 @@
 		70BE63A62657729600F2678F /* echoHackathon */ = {
 			isa = PBXGroup;
 			children = (
-				70BE63A72657729600F2678F /* AppDelegate.swift */,
-				70BE63A92657729600F2678F /* SceneDelegate.swift */,
-				70BE63AB2657729600F2678F /* ViewController.swift */,
-				70BE63AD2657729600F2678F /* Main.storyboard */,
-				70BE63B02657729900F2678F /* Assets.xcassets */,
-				70BE63B22657729900F2678F /* LaunchScreen.storyboard */,
+				70BE63D42657977F00F2678F /* Common */,
+				70BE63C526578EAC00F2678F /* Application */,
+				70BE63C426578E9C00F2678F /* Resources */,
+				70BE63C326578E9500F2678F /* Sources */,
 				70BE63B52657729900F2678F /* Info.plist */,
 			);
 			path = echoHackathon;
+			sourceTree = "<group>";
+		};
+		70BE63C226578E8C00F2678F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				70BE63E62657F20E00F2678F /* UIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		70BE63C326578E9500F2678F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				70BE63DD2657A27700F2678F /* Model */,
+				70BE63AD2657729600F2678F /* Main.storyboard */,
+				70BE63C826578EC100F2678F /* VC */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		70BE63C426578E9C00F2678F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				70BE63B02657729900F2678F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		70BE63C526578EAC00F2678F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				70BE63A72657729600F2678F /* AppDelegate.swift */,
+				70BE63A92657729600F2678F /* SceneDelegate.swift */,
+				70BE63B22657729900F2678F /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		70BE63C826578EC100F2678F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				70BE63BF26578E2200F2678F /* NavigationViewController.swift */,
+				70BE63AB2657729600F2678F /* ViewController.swift */,
+				70BE63BC265788D000F2678F /* MapViewController.swift */,
+				70BE63CA2657915300F2678F /* ModeCVC.swift */,
+				70BE63CB2657915300F2678F /* ModeCVC.xib */,
+				70BE63CF2657917F00F2678F /* ElectronicTVC.swift */,
+				70BE63D02657917F00F2678F /* ElectronicTVC.xib */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		70BE63D42657977F00F2678F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				70BE63D52657979A00F2678F /* Font */,
+				70BE63C226578E8C00F2678F /* Extension */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		70BE63D52657979A00F2678F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				70BE63D72657983B00F2678F /* Font Awesome 5 Brands-Regular-400.otf */,
+				70BE63D82657983B00F2678F /* Font Awesome 5 Free-Regular-400.otf */,
+				70BE63D62657983B00F2678F /* Font Awesome 5 Free-Solid-900.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		70BE63DD2657A27700F2678F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70BE63E22657D7C400F2678F /* ModeModel.swift */,
+				70BE63DE2657A29A00F2678F /* ElectronicModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,8 +224,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70BE63D22657917F00F2678F /* ElectronicTVC.xib in Resources */,
+				70BE63DB2657983B00F2678F /* Font Awesome 5 Free-Regular-400.otf in Resources */,
 				70BE63B42657729900F2678F /* LaunchScreen.storyboard in Resources */,
+				70BE63CD2657915300F2678F /* ModeCVC.xib in Resources */,
+				70BE63D92657983B00F2678F /* Font Awesome 5 Free-Solid-900.otf in Resources */,
 				70BE63B12657729900F2678F /* Assets.xcassets in Resources */,
+				70BE63DA2657983B00F2678F /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
 				70BE63AF2657729600F2678F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +243,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				70BE63AC2657729600F2678F /* ViewController.swift in Sources */,
+				70BE63DF2657A29A00F2678F /* ElectronicModel.swift in Sources */,
+				70BE63CC2657915300F2678F /* ModeCVC.swift in Sources */,
 				70BE63A82657729600F2678F /* AppDelegate.swift in Sources */,
 				70BE63AA2657729600F2678F /* SceneDelegate.swift in Sources */,
+				70BE63E32657D7C500F2678F /* ModeModel.swift in Sources */,
+				70BE63C026578E2200F2678F /* NavigationViewController.swift in Sources */,
+				70BE63D12657917F00F2678F /* ElectronicTVC.swift in Sources */,
+				70BE63BD265788D000F2678F /* MapViewController.swift in Sources */,
+				70BE63E72657F20E00F2678F /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
