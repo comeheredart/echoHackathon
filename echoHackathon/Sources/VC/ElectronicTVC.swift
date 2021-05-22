@@ -14,8 +14,7 @@ class ElectronicTVC: UITableViewCell {
     static var Nib = UINib(nibName: "ElectronicTVC", bundle: nil)
     var perSecond: Int = 0
     var kwhValue: Int = 0
-    //var model: ElectronicModel? = nil
-    var model: ElectronicModel? = nil
+    
     
     //MARK:- IBOutlet Part
     @IBOutlet var view: UIView!
@@ -47,20 +46,23 @@ class ElectronicTVC: UITableViewCell {
         
         ElectronicNameLabel.text = model.name
         perSecond = model.perSecond
-        kwhLabel.text = "bolt \(model.curkwh) kwh"
-        self.model = model
         count(with: model)
     }
     
     func count(with model: ElectronicModel) {
+        
         let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             if self.alwaysButton.currentTitleColor == UIColor.echo_yellow3 {
                 self.kwhValue += model.perSecond
-                self.kwhLabel.text = "\(self.kwhValue)"
+                self.kwhLabel.text = "bolt \(self.kwhValue) kwh"
             }
         }
         
         timer.fire()
+    }
+    
+    func getEachSum() -> Int {
+        return self.kwhValue
     }
     
     //MARK:- Function
@@ -82,7 +84,6 @@ class ElectronicTVC: UITableViewCell {
             blockButton.setTitleColor(.systemGray2, for: .normal)
         }
         kwhLabel.textColor = .echo_yellow3
-        model?.isOn = true
     }
     
     @IBAction func blockBtnClicked(_ sender: Any) {
@@ -91,7 +92,6 @@ class ElectronicTVC: UITableViewCell {
             blockButton.setTitleColor(.echo_green, for: .normal)
         }
         kwhLabel.textColor = .echo_green
-        model?.isOn = false
     }
     
 

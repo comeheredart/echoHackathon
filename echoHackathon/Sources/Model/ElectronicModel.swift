@@ -10,12 +10,7 @@ import Foundation
 struct ElectronicModel {
     var name: String
     var perSecond: Int
-    var curkwh: Int
     var isOn: Bool
-    
-    func wow(){
-        print(self.isOn)
-    }
     
     
 }
