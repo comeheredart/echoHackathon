@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
 
     @IBOutlet var ElectricSumLabel: UILabel!
+    @IBOutlet var Co2Label: UILabel!
+    @IBOutlet var wonLabel: UILabel!
+
     @IBOutlet var sumView: UIView!
     @IBOutlet var co2View: UIView!
     @IBOutlet var priceView: UIView!
@@ -26,7 +29,10 @@ class ViewController: UIViewController {
     var modeModels = [ModeModel]()
     var kwhList: [Int] = [0, 0, 0, 0, 0]
     var offList = [Int]()
+    
     var sumValue = 0
+    var Co2Value = 0
+    var wonValue = 0
     
     
     //MARK:- Constraint Part
@@ -129,6 +135,9 @@ class ViewController: UIViewController {
         }
         
         ElectricSumLabel.text = "\(sum)"
+        Co2Label.text = "\(round(Double(sum) / 0.45))"
+        wonLabel.text = "\(sum * 100)"
+        //1당 0.45 , 100원
     }
     
     
@@ -162,7 +171,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         
         //각 셀의 kwh 값 배열 갱신 1초마다..
-        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {_ in
+        _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+
             self.kwhList[indexPath.row] = cell.getEachSum()
         }
         

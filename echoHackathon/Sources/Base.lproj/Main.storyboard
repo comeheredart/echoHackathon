@@ -275,12 +275,14 @@
                     </navigationItem>
                     <size key="freeformSize" width="414" height="2000"/>
                     <connections>
+                        <outlet property="Co2Label" destination="nnA-4H-l2j" id="97p-lN-VbM"/>
                         <outlet property="ElectricSumLabel" destination="tGO-eZ-2UJ" id="6zP-fx-Fs2"/>
                         <outlet property="co2View" destination="ObW-du-dtz" id="kEc-qT-GIf"/>
                         <outlet property="collectionView" destination="2U8-R8-pby" id="aN4-wR-sJt"/>
                         <outlet property="priceView" destination="GTI-Ux-9cW" id="sdK-Og-rgR"/>
                         <outlet property="sumView" destination="lNz-Xb-fVK" id="Mhk-Qw-lWg"/>
                         <outlet property="tableView" destination="gPT-3s-HMv" id="0Rl-lj-qm2"/>
+                        <outlet property="wonLabel" destination="RSG-fb-Qro" id="hNf-EP-Twg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
