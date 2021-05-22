@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     
     var electicModels = [ElectronicModel]()
     var modeModels = [ModeModel]()
+    var kwhList: [Int] = [0, 0, 0, 0, 0]
     var offList = [Int]()
     var sumValue = 0
     
@@ -42,20 +43,9 @@ class ViewController: UIViewController {
         viewSetting()
         tableViewSetting()
         collectionViewSetting()
-        //reloadTableView()
+        setTimer()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-//        var tableViewHeight: CGFloat = 0;
-//        tableViewHeight = CGFloat(electicModels.count * 100)
-//
-//        print(tableViewHeight)
-//
-//        NSLayoutConstraint.activate([
-//            tableView.heightAnchor.constraint(equalToConstant: tableViewHeight)
-//        ])
-    }
+
     
     
     //MARK:- IBAction Part
@@ -107,11 +97,11 @@ class ViewController: UIViewController {
         
         electicModels.append(contentsOf: [
             
-            ElectronicModel(name: "샘성 냉장고", perSecond: 30, curkwh: 100, isOn: false),
-            ElectronicModel(name: "엘지 티비", perSecond: 40, curkwh: 0, isOn: false),
-            ElectronicModel(name: "김치냉장고", perSecond: 50, curkwh: 200, isOn: true),
-            ElectronicModel(name: "휘센 에어컨", perSecond: 80, curkwh: 200, isOn: false),
-            ElectronicModel(name: "내 컴퓨터", perSecond: 30, curkwh: 200, isOn: false),
+            ElectronicModel(name: "샘성 냉장고", perSecond: 30, isOn: false),
+            ElectronicModel(name: "엘지 티비", perSecond: 40, isOn: false),
+            ElectronicModel(name: "김치냉장고", perSecond: 50, isOn: true),
+            ElectronicModel(name: "휘센 에어컨", perSecond: 80, isOn: false),
+            ElectronicModel(name: "내 컴퓨터", perSecond: 30, isOn: false),
 
         
         ])
@@ -131,25 +121,25 @@ class ViewController: UIViewController {
     
     //MARK:- Function Part
     
-    
-    func reloadTableView() {
-        let onList = [Int]()
-        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            for item in self.electicModels {
-                if item.isOn {
-                    self.sumValue += item.perSecond
-                    print(self.sumValue)
-                    self.ElectricSumLabel.text = "\(self.sumValue)"
-                }
-            }
-
+    func calcSum() {
+        var sum = 0
+        
+        for item in kwhList {
+            sum += item
         }
-        timer.fire()
         
-        
+        ElectricSumLabel.text = "\(sum)"
     }
     
     
+    func setTimer() {
+        //1초에 한번씩 업뎃
+        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+            self.calcSum()
+        }
+        timer.fire()
+        
+    }
 
 
 
@@ -170,15 +160,22 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.configure(with: electicModels[indexPath.row])
         
+        
+        //각 셀의 kwh 값 배열 갱신 1초마다..
+        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {_ in
+            self.kwhList[indexPath.row] = cell.getEachSum()
+        }
+        
+        
+        //mode 꺼주기
         for item in offList {
             if indexPath.row == item {
                 cell.turnOff()
                 print("\(indexPath.row) 끔")
             }
-        } //mode 꺼주기
+        }
         
-        
-        //켜져있는 애들 리스트 여기서 받아오기, 그래서 위에 함수에서 더해주고 계속 reload 호출하기
+    
         return cell
     }
     

@@ -34,8 +34,5 @@ class ModeCVC: UICollectionViewCell {
         view.layer.cornerRadius = 20
     }
     
-    func setSelectedColor() {
-        modeimageLabel.textColor = .echo_yellow3
-    }
 
 }
