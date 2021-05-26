@@ -305,37 +305,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Oe-ht-P9q" customClass="NMFMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="430"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="430" id="8QS-G2-20x"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpT-aK-GbV">
-                                <rect key="frame" x="0.0" y="430" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1122"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4N-Lp-NUE">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1122"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6p-Bk-lD2" userLabel="ContentView">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1122"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울특별시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPg-zZ-DEt">
-                                                        <rect key="frame" x="30" y="30" width="150" height="30"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B40-56-Bha" customClass="NMFMapView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="150" id="gNa-vP-RJZ"/>
-                                                            <constraint firstAttribute="height" constant="30" id="yjm-wg-KCT"/>
+                                                            <constraint firstAttribute="height" constant="350" id="W4J-Tp-gfC"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울특별시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axR-vC-BfQ">
+                                                        <rect key="frame" x="30" y="380" width="117" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Rh2-wp-VNI"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Icw-RB-JMt">
+                                                        <rect key="frame" x="25" y="435" width="364" height="647"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="647" id="gco-Kf-tdy"/>
+                                                        </constraints>
+                                                    </tableView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="cPg-zZ-DEt" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" constant="30" id="0Wm-fI-t4q"/>
-                                                    <constraint firstItem="cPg-zZ-DEt" firstAttribute="top" secondItem="V6p-Bk-lD2" secondAttribute="top" constant="30" id="jf5-gV-b0Z"/>
+                                                    <constraint firstItem="Icw-RB-JMt" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" constant="25" id="6fz-dL-e6Z"/>
+                                                    <constraint firstItem="axR-vC-BfQ" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" constant="30" id="6iW-1J-ZUV"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Icw-RB-JMt" secondAttribute="bottom" constant="40" id="H44-8G-nxT"/>
+                                                    <constraint firstItem="B40-56-Bha" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" id="RQe-UI-YYQ"/>
+                                                    <constraint firstItem="Icw-RB-JMt" firstAttribute="top" secondItem="axR-vC-BfQ" secondAttribute="bottom" constant="15" id="XJw-42-1xZ"/>
+                                                    <constraint firstItem="axR-vC-BfQ" firstAttribute="top" secondItem="B40-56-Bha" secondAttribute="bottom" constant="30" id="a7m-9w-wf6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Icw-RB-JMt" secondAttribute="trailing" constant="25" id="fFX-J7-f7R"/>
+                                                    <constraint firstItem="B40-56-Bha" firstAttribute="top" secondItem="V6p-Bk-lD2" secondAttribute="top" id="vSF-eJ-7vT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="B40-56-Bha" secondAttribute="trailing" id="xnV-Na-A8O"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -351,7 +364,7 @@
                                         <viewLayoutGuide key="frameLayoutGuide" id="xuj-bC-ACW"/>
                                     </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstItem="o4N-Lp-NUE" firstAttribute="top" secondItem="hpT-aK-GbV" secondAttribute="top" id="cCY-5U-Pst"/>
                                     <constraint firstItem="o4N-Lp-NUE" firstAttribute="leading" secondItem="hpT-aK-GbV" secondAttribute="leading" id="kJu-fS-q9t"/>
@@ -364,17 +377,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hpT-aK-GbV" firstAttribute="leading" secondItem="1Xt-dp-sGG" secondAttribute="leading" id="1ab-09-gFZ"/>
-                            <constraint firstItem="hpT-aK-GbV" firstAttribute="top" secondItem="4Oe-ht-P9q" secondAttribute="bottom" id="BVf-Rq-9q1"/>
-                            <constraint firstItem="4Oe-ht-P9q" firstAttribute="top" secondItem="IxI-PP-2jj" secondAttribute="top" id="L81-wC-gK3"/>
+                            <constraint firstItem="hpT-aK-GbV" firstAttribute="top" secondItem="1Xt-dp-sGG" secondAttribute="top" id="CWn-WU-GJm"/>
                             <constraint firstItem="1Xt-dp-sGG" firstAttribute="bottom" secondItem="hpT-aK-GbV" secondAttribute="bottom" id="T8T-0y-DKo"/>
                             <constraint firstItem="1Xt-dp-sGG" firstAttribute="trailing" secondItem="hpT-aK-GbV" secondAttribute="trailing" id="mG6-jq-HVc"/>
-                            <constraint firstItem="4Oe-ht-P9q" firstAttribute="leading" secondItem="1Xt-dp-sGG" secondAttribute="leading" id="xle-dO-aBf"/>
-                            <constraint firstItem="4Oe-ht-P9q" firstAttribute="trailing" secondItem="1Xt-dp-sGG" secondAttribute="trailing" id="zg4-Nd-KNa"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
-                        <outlet property="mapView" destination="4Oe-ht-P9q" id="NOW-UY-IcZ"/>
+                        <outlet property="mapView" destination="B40-56-Bha" id="ToE-tj-j4X"/>
+                        <outlet property="tableView" destination="Icw-RB-JMt" id="Uay-mt-hsu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULu-wE-RXt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -385,6 +396,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

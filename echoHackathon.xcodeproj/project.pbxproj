@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70A7B2D2265EBD050003ED10 /* CompareTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7B2D0265EBD050003ED10 /* CompareTVC.swift */; };
+		70A7B2D3265EBD050003ED10 /* CompareTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70A7B2D1265EBD050003ED10 /* CompareTVC.xib */; };
 		70BE63A82657729600F2678F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63A72657729600F2678F /* AppDelegate.swift */; };
 		70BE63AA2657729600F2678F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63A92657729600F2678F /* SceneDelegate.swift */; };
 		70BE63AC2657729600F2678F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63AB2657729600F2678F /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		6CEAED4FF99B69F5B3BA410E /* Pods-echoHackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-echoHackathon.release.xcconfig"; path = "Target Support Files/Pods-echoHackathon/Pods-echoHackathon.release.xcconfig"; sourceTree = "<group>"; };
+		70A7B2D0265EBD050003ED10 /* CompareTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareTVC.swift; sourceTree = "<group>"; };
+		70A7B2D1265EBD050003ED10 /* CompareTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompareTVC.xib; sourceTree = "<group>"; };
 		70BE63A42657729600F2678F /* echoHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = echoHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BE63A72657729600F2678F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70BE63A92657729600F2678F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				70BE63CB2657915300F2678F /* ModeCVC.xib */,
 				70BE63CF2657917F00F2678F /* ElectronicTVC.swift */,
 				70BE63D02657917F00F2678F /* ElectronicTVC.xib */,
+				70A7B2D0265EBD050003ED10 /* CompareTVC.swift */,
+				70A7B2D1265EBD050003ED10 /* CompareTVC.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -188,7 +194,6 @@
 				D61743783FDC8A03885641C3 /* Pods-echoHackathon.debug.xcconfig */,
 				6CEAED4FF99B69F5B3BA410E /* Pods-echoHackathon.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -259,6 +264,7 @@
 				70BE63B12657729900F2678F /* Assets.xcassets in Resources */,
 				70BE63DA2657983B00F2678F /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
 				70BE63AF2657729600F2678F /* Main.storyboard in Resources */,
+				70A7B2D3265EBD050003ED10 /* CompareTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +323,7 @@
 				70BE63A82657729600F2678F /* AppDelegate.swift in Sources */,
 				70BE63AA2657729600F2678F /* SceneDelegate.swift in Sources */,
 				70BE63E32657D7C500F2678F /* ModeModel.swift in Sources */,
+				70A7B2D2265EBD050003ED10 /* CompareTVC.swift in Sources */,
 				70BE63C026578E2200F2678F /* NavigationViewController.swift in Sources */,
 				70BE63D12657917F00F2678F /* ElectronicTVC.swift in Sources */,
 				70BE63BD265788D000F2678F /* MapViewController.swift in Sources */,

@@ -29,11 +29,7 @@ class ViewController: UIViewController {
     var modeModels = [ModeModel]()
     var kwhList: [Int] = [0, 0, 0, 0, 0]
     var offList = [Int]()
-    
-    var sumValue = 0
-    var Co2Value = 0
-    var wonValue = 0
-    
+
     
     //MARK:- Constraint Part
     
@@ -60,6 +56,10 @@ class ViewController: UIViewController {
         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "MapViewController") as? MapViewController else {
             return
         }
+        
+        nextVC.sumValue = Int(self.ElectricSumLabel.text!)!
+        nextVC.Co2Value = Double(self.Co2Label.text!)!
+        nextVC.wonValue = Int(self.wonLabel.text!)!
         
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
