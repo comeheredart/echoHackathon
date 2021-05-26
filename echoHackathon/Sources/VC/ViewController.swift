@@ -172,6 +172,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         //각 셀의 kwh 값 배열 갱신 1초마다..
         _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+
             self.kwhList[indexPath.row] = cell.getEachSum()
         }
         
