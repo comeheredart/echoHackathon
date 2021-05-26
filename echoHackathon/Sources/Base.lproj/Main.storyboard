@@ -337,17 +337,27 @@
                                                             <constraint firstAttribute="height" constant="730" id="gco-Kf-tdy"/>
                                                         </constraints>
                                                     </tableView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yn2-HG-U5H">
+                                                        <rect key="frame" x="313" y="385" width="86" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="다른 시와 비교">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="Icw-RB-JMt" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" constant="10" id="6fz-dL-e6Z"/>
                                                     <constraint firstItem="axR-vC-BfQ" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" constant="30" id="6iW-1J-ZUV"/>
+                                                    <constraint firstItem="yn2-HG-U5H" firstAttribute="centerY" secondItem="axR-vC-BfQ" secondAttribute="centerY" id="8Bl-4W-IoP"/>
                                                     <constraint firstAttribute="bottom" secondItem="Icw-RB-JMt" secondAttribute="bottom" constant="40" id="H44-8G-nxT"/>
                                                     <constraint firstItem="B40-56-Bha" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" id="RQe-UI-YYQ"/>
                                                     <constraint firstItem="Icw-RB-JMt" firstAttribute="top" secondItem="axR-vC-BfQ" secondAttribute="bottom" constant="15" id="XJw-42-1xZ"/>
                                                     <constraint firstItem="axR-vC-BfQ" firstAttribute="top" secondItem="B40-56-Bha" secondAttribute="bottom" constant="30" id="a7m-9w-wf6"/>
                                                     <constraint firstAttribute="trailing" secondItem="Icw-RB-JMt" secondAttribute="trailing" constant="10" id="fFX-J7-f7R"/>
                                                     <constraint firstItem="B40-56-Bha" firstAttribute="top" secondItem="V6p-Bk-lD2" secondAttribute="top" id="vSF-eJ-7vT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="yn2-HG-U5H" secondAttribute="trailing" constant="15" id="vh0-K8-a4r"/>
                                                     <constraint firstAttribute="trailing" secondItem="B40-56-Bha" secondAttribute="trailing" id="xnV-Na-A8O"/>
                                                 </constraints>
                                             </view>

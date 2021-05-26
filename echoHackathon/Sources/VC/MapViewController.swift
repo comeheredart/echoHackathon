@@ -8,7 +8,7 @@
 import UIKit
 import NMapsMap
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     //MARK: IBOutlet
     @IBOutlet var mapView: NMFMapView!
@@ -16,6 +16,8 @@ class MapViewController: UIViewController {
     
     
     //MARK: Variables
+    var locationManager: CLLocationManager!
+    
     var sumValue: Int = 0
     var Co2Value: Double = 0
     var wonValue: Int = 0
@@ -28,6 +30,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
 
         tableViewSetting()
+        locationSetting()
         
         valueArray = [self.sumValue, self.wonValue, Int(self.Co2Value), 0]
     }
@@ -45,6 +48,22 @@ class MapViewController: UIViewController {
         tableView.separatorStyle = .none
         
         tableView.register(CompareTVC.Nib, forCellReuseIdentifier: CompareTVC.identifier)
+    }
+    
+    func locationSetting() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        
+        let coor = locationManager.location?.coordinate
+        var latitude = (coor?.latitude) ?? 0.0
+        var longitude = coor?.longitude ?? 0.0
+        
+        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: latitude, lng: longitude))
+        mapView.moveCamera(cameraUpdate)
+        mapView.zoomLevel = 8
     }
     
     
@@ -73,3 +92,5 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource {
     
     
 }
+
+
