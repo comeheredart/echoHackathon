@@ -302,17 +302,17 @@
             <objects>
                 <viewController storyboardIdentifier="MapViewController" id="Tmy-TU-kP7" customClass="MapViewController" customModule="echoHackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IxI-PP-2jj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpT-aK-GbV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1122"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1222"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4N-Lp-NUE">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1122"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1222"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6p-Bk-lD2" userLabel="ContentView">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1122"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1205"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B40-56-Bha" customClass="NMFMapView">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
@@ -331,22 +331,22 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Icw-RB-JMt">
-                                                        <rect key="frame" x="25" y="435" width="364" height="647"/>
+                                                        <rect key="frame" x="10" y="435" width="394" height="730"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="647" id="gco-Kf-tdy"/>
+                                                            <constraint firstAttribute="height" constant="730" id="gco-Kf-tdy"/>
                                                         </constraints>
                                                     </tableView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="Icw-RB-JMt" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" constant="25" id="6fz-dL-e6Z"/>
+                                                    <constraint firstItem="Icw-RB-JMt" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" constant="10" id="6fz-dL-e6Z"/>
                                                     <constraint firstItem="axR-vC-BfQ" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" constant="30" id="6iW-1J-ZUV"/>
                                                     <constraint firstAttribute="bottom" secondItem="Icw-RB-JMt" secondAttribute="bottom" constant="40" id="H44-8G-nxT"/>
                                                     <constraint firstItem="B40-56-Bha" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" id="RQe-UI-YYQ"/>
                                                     <constraint firstItem="Icw-RB-JMt" firstAttribute="top" secondItem="axR-vC-BfQ" secondAttribute="bottom" constant="15" id="XJw-42-1xZ"/>
                                                     <constraint firstItem="axR-vC-BfQ" firstAttribute="top" secondItem="B40-56-Bha" secondAttribute="bottom" constant="30" id="a7m-9w-wf6"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Icw-RB-JMt" secondAttribute="trailing" constant="25" id="fFX-J7-f7R"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Icw-RB-JMt" secondAttribute="trailing" constant="10" id="fFX-J7-f7R"/>
                                                     <constraint firstItem="B40-56-Bha" firstAttribute="top" secondItem="V6p-Bk-lD2" secondAttribute="top" id="vSF-eJ-7vT"/>
                                                     <constraint firstAttribute="trailing" secondItem="B40-56-Bha" secondAttribute="trailing" id="xnV-Na-A8O"/>
                                                 </constraints>
@@ -364,7 +364,7 @@
                                         <viewLayoutGuide key="frameLayoutGuide" id="xuj-bC-ACW"/>
                                     </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="o4N-Lp-NUE" firstAttribute="top" secondItem="hpT-aK-GbV" secondAttribute="top" id="cCY-5U-Pst"/>
                                     <constraint firstItem="o4N-Lp-NUE" firstAttribute="leading" secondItem="hpT-aK-GbV" secondAttribute="leading" id="kJu-fS-q9t"/>
@@ -382,7 +382,7 @@
                             <constraint firstItem="1Xt-dp-sGG" firstAttribute="trailing" secondItem="hpT-aK-GbV" secondAttribute="trailing" id="mG6-jq-HVc"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="414" height="1200"/>
+                    <size key="freeformSize" width="414" height="1300"/>
                     <connections>
                         <outlet property="mapView" destination="B40-56-Bha" id="ToE-tj-j4X"/>
                         <outlet property="tableView" destination="Icw-RB-JMt" id="Uay-mt-hsu"/>
@@ -396,9 +396,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
