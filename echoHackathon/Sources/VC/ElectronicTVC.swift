@@ -54,7 +54,7 @@ class ElectronicTVC: UITableViewCell {
         let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             if self.alwaysButton.currentTitleColor == UIColor.echo_yellow3 {
                 self.kwhValue += model.perSecond
-                self.kwhLabel.text = "bolt \(self.kwhValue) kwh"
+                self.kwhLabel.text = "bolt\(self.kwhValue)kwh"
             }
         }
         
@@ -89,9 +89,9 @@ class ElectronicTVC: UITableViewCell {
     @IBAction func blockBtnClicked(_ sender: Any) {
         if (blockButton.currentTitleColor == UIColor.systemGray2) {
             alwaysButton.setTitleColor(.systemGray2, for: .normal)
-            blockButton.setTitleColor(.echo_green, for: .normal)
+            blockButton.setTitleColor(.echo_green3, for: .normal)
         }
-        kwhLabel.textColor = .echo_green
+        kwhLabel.textColor = .echo_green3
     }
     
 
