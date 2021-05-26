@@ -72,13 +72,13 @@ class ViewController: UIViewController {
     
     func viewSetting() {
         sumView.layer.cornerRadius = sumView.frame.width / 2
-        sumView.backgroundColor = .echo_yellow1
+        sumView.backgroundColor = .echo_green1
         
         co2View.layer.cornerRadius = co2View.frame.width / 2
-        co2View.backgroundColor = .echo_yellow2
+        co2View.backgroundColor = .echo_green2
         
         priceView.layer.cornerRadius = priceView.frame.width / 2
-        priceView.backgroundColor = .echo_yellow3
+        priceView.backgroundColor = .echo_green3
         
         
     }
@@ -180,7 +180,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         for item in offList {
             if indexPath.row == item {
                 cell.turnOff()
-                print("\(indexPath.row) 끔")
+
             }
         }
         

@@ -26,7 +26,9 @@ extension UIColor {
     class var echo_yellow1: UIColor { UIColor(hex: 0xF5E6AB) }
     class var echo_yellow2: UIColor { UIColor(hex: 0xF2D675) }
     class var echo_yellow3: UIColor { UIColor(hex: 0xF0C33C) }
-    class var echo_green: UIColor { UIColor(hex: 0x1ED14B) }
+    class var echo_green1: UIColor { UIColor(hex: 0xB8E6BF) }
+    class var echo_green2: UIColor { UIColor(hex: 0x1ED14B) }
+    class var echo_green3: UIColor { UIColor(hex: 0x00BA37) }
     class var echo_bg: UIColor { UIColor(hex: 0x1A1A1A) }
     
 }
