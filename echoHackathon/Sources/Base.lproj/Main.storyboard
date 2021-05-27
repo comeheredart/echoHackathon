@@ -8,6 +8,11 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Font Awesome 5 Free-Solid-900.otf">
+            <string>FontAwesome5Free-Solid</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation View Controller-->
         <scene sceneID="CUQ-CU-AUZ">
@@ -160,9 +165,31 @@
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEG-9w-l5z">
+                                                        <rect key="frame" x="314" y="0.0" width="90" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="90" id="OvG-Py-gW7"/>
+                                                            <constraint firstAttribute="height" constant="80" id="wkf-sN-L1p"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="FontAwesome5Free-Solid" family="Font Awesome 5 Free" pointSize="74"/>
+                                                        <state key="normal" title="heart">
+                                                            <color key="titleColor" red="1" green="0.83261122001764631" blue="0.83248836588402686" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="donateBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="78V-2P-tfq"/>
+                                                            <segue destination="OC9-Qx-1qe" kind="show" id="wGk-10-pvV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기부" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ge-bS-JSh">
+                                                        <rect key="frame" x="344" y="30" width="33" height="23"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="QEG-9w-l5z" firstAttribute="top" secondItem="FN7-qJ-uzv" secondAttribute="top" id="0zb-e3-xyR"/>
                                                     <constraint firstItem="lNz-Xb-fVK" firstAttribute="top" secondItem="ReD-AN-MCi" secondAttribute="bottom" constant="20" id="1CP-V8-7aS"/>
                                                     <constraint firstAttribute="height" constant="500" id="55S-d1-cW7"/>
                                                     <constraint firstItem="ObW-du-dtz" firstAttribute="leading" secondItem="FN7-qJ-uzv" secondAttribute="leading" constant="20" id="5c1-b7-5C0"/>
@@ -170,6 +197,9 @@
                                                     <constraint firstItem="ReD-AN-MCi" firstAttribute="top" secondItem="FN7-qJ-uzv" secondAttribute="top" constant="10" id="AvJ-Li-DGo"/>
                                                     <constraint firstItem="GTI-Ux-9cW" firstAttribute="top" secondItem="ObW-du-dtz" secondAttribute="bottom" constant="10" id="BCY-0z-fOo"/>
                                                     <constraint firstItem="ObW-du-dtz" firstAttribute="top" secondItem="lNz-Xb-fVK" secondAttribute="bottom" constant="10" id="Da7-3b-AjT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0Ge-bS-JSh" secondAttribute="trailing" constant="37" id="KW7-cP-wKd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="QEG-9w-l5z" secondAttribute="trailing" constant="10" id="SdP-XP-9iG"/>
+                                                    <constraint firstItem="0Ge-bS-JSh" firstAttribute="top" secondItem="FN7-qJ-uzv" secondAttribute="top" constant="30" id="V2m-TI-h6F"/>
                                                     <constraint firstItem="lNz-Xb-fVK" firstAttribute="leading" secondItem="FN7-qJ-uzv" secondAttribute="leading" constant="20" id="vFI-IV-QNL"/>
                                                     <constraint firstItem="ReD-AN-MCi" firstAttribute="leading" secondItem="FN7-qJ-uzv" secondAttribute="leading" constant="20" id="yoK-Q5-C3g"/>
                                                     <constraint firstAttribute="width" constant="414" id="zBB-sW-5sm"/>
@@ -405,6 +435,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULu-wE-RXt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="950.72463768115949" y="83.705357142857139"/>
+        </scene>
+        <!--Donate View Controller-->
+        <scene sceneID="8qo-og-IcT">
+            <objects>
+                <viewController id="OC9-Qx-1qe" customClass="DonateViewController" customModule="echoHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="620-xD-kti">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VXh-4g-Q3G">
+                                <rect key="frame" x="20" y="118" width="374" height="1150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1150" id="eA0-w9-Trl"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gJ4-a4-rVe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VXh-4g-Q3G" firstAttribute="top" secondItem="gJ4-a4-rVe" secondAttribute="top" constant="30" id="07O-cv-ghw"/>
+                            <constraint firstItem="gJ4-a4-rVe" firstAttribute="trailing" secondItem="VXh-4g-Q3G" secondAttribute="trailing" constant="20" id="FPc-CV-SpM"/>
+                            <constraint firstItem="VXh-4g-Q3G" firstAttribute="leading" secondItem="gJ4-a4-rVe" secondAttribute="leading" constant="20" id="gr2-xB-OPo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="muM-Jp-Sg7"/>
+                    <size key="freeformSize" width="414" height="1400"/>
+                    <connections>
+                        <outlet property="tableview" destination="VXh-4g-Q3G" id="7BD-8S-2MK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bKF-gW-Ne2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631.8840579710147" y="117.85714285714285"/>
         </scene>
     </scenes>
     <resources>

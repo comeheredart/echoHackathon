@@ -61,6 +61,7 @@ class ElectronicTVC: UITableViewCell {
         timer.fire()
     }
     
+    
     func getEachSum() -> Int {
         return self.kwhValue
     }
@@ -85,6 +86,7 @@ class ElectronicTVC: UITableViewCell {
         }
         kwhLabel.textColor = .echo_yellow3
     }
+    
     
     @IBAction func blockBtnClicked(_ sender: Any) {
         if (blockButton.currentTitleColor == UIColor.systemGray2) {

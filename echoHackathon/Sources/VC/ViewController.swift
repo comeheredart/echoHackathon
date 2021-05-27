@@ -151,6 +151,11 @@ class ViewController: UIViewController {
     }
 
 
+    //MARK: IBAction
+    @IBAction func donateBtnClicked(_ sender: UIButton) {
+        
+    }
+    
 
 
 }
@@ -193,7 +198,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return 185
     }
     
-    
+
     
     
 }
