@@ -22,6 +22,7 @@ class DonateViewController: UIViewController {
     func tableviewSetting() {
         tableview.delegate = self
         tableview.dataSource = self
+        tableview.separatorStyle = .none
     
         tableview.register(DonateTVC.Nib, forCellReuseIdentifier: DonateTVC.identifier)
     }

@@ -9,9 +9,10 @@ import UIKit
 
 class DonateTVC: UITableViewCell {
 
+    @IBOutlet var view: UIView!
     @IBOutlet var title: UILabel!
     @IBOutlet var subtitle: UILabel!
-    @IBOutlet var imageview: UIImageView!
+    //@IBOutlet var imageview: UIImageView!
     
     static var Nib = UINib(nibName: "DonateTVC", bundle: nil)
     static let identifier = "DonateTVC"
@@ -28,8 +29,8 @@ class DonateTVC: UITableViewCell {
     
 
     func setDisplay() {
-        self.contentView.layer.cornerRadius = 20
-        self.contentView.layer.masksToBounds = true
+        self.view.layer.cornerRadius = 20
+        self.view.layer.masksToBounds = true
 
     }
     

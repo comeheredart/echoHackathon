@@ -4,46 +4,85 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="212" id="KGk-i7-Jjw" customClass="DonateTVC" customModule="echoHackathon" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="406" height="212"/>
+            <rect key="frame" x="0.0" y="0.0" width="398" height="260"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="406" height="212"/>
+                <rect key="frame" x="0.0" y="0.0" width="398" height="260"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coal" translatesAutoresizingMaskIntoConstraints="NO" id="h8t-Yr-YyK">
-                        <rect key="frame" x="0.0" y="-8" width="406" height="279"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="석탄 화력 발전 멈춰!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzG-k8-wMx">
-                        <rect key="frame" x="20" y="76" width="221" height="34"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="섭타이틀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqh-Kn-jQ6">
-                        <rect key="frame" x="20" y="118" width="63" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XjL-tf-sHM">
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="260"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNv-tm-RSr">
+                                <rect key="frame" x="15" y="15" width="353" height="235"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="석탄 화력 발전 멈춰!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzG-k8-wMx">
+                                        <rect key="frame" x="16" y="50" width="221" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="섭타이틀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqh-Kn-jQ6">
+                                        <rect key="frame" x="16" y="92" width="63" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HwR-OR-8eo">
+                                <rect key="frame" x="119" y="200" width="264" height="37"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="eIr-8I-f5v"/>
+                                    <constraint firstAttribute="height" constant="37" id="n9v-ll-32N"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NNv-tm-RSr" firstAttribute="top" secondItem="XjL-tf-sHM" secondAttribute="top" constant="15" id="4Qf-EM-Okx"/>
+                            <constraint firstAttribute="bottom" secondItem="NNv-tm-RSr" secondAttribute="bottom" constant="10" id="DxM-GO-JRN"/>
+                            <constraint firstAttribute="trailing" secondItem="HwR-OR-8eo" secondAttribute="trailing" constant="15" id="F2u-d5-FgM"/>
+                            <constraint firstItem="HwR-OR-8eo" firstAttribute="top" secondItem="XjL-tf-sHM" secondAttribute="top" constant="200" id="m9W-g2-8He"/>
+                            <constraint firstAttribute="trailing" secondItem="NNv-tm-RSr" secondAttribute="trailing" constant="30" id="oPC-Xi-oqq"/>
+                            <constraint firstItem="NNv-tm-RSr" firstAttribute="leading" secondItem="XjL-tf-sHM" secondAttribute="leading" constant="15" id="xYi-Uh-Dp7"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="XjL-tf-sHM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Leu-OU-Ao9"/>
+                    <constraint firstAttribute="bottom" secondItem="XjL-tf-sHM" secondAttribute="bottom" id="eD4-P3-KfH"/>
+                    <constraint firstItem="XjL-tf-sHM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rcF-OJ-dlh"/>
+                    <constraint firstAttribute="trailing" secondItem="XjL-tf-sHM" secondAttribute="trailing" id="xRT-O4-oox"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="imageview" destination="h8t-Yr-YyK" id="vYD-ql-vK0"/>
                 <outlet property="subtitle" destination="mqh-Kn-jQ6" id="9Dw-0f-Oag"/>
                 <outlet property="title" destination="gzG-k8-wMx" id="t8s-FH-RPn"/>
+                <outlet property="view" destination="NNv-tm-RSr" id="XCH-GZ-Ylu"/>
             </connections>
-            <point key="canvasLocation" x="200.00000000000003" y="121.875"/>
+            <point key="canvasLocation" x="194.20289855072465" y="121.875"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="coal" width="600" height="400"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
