@@ -445,7 +445,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VXh-4g-Q3G">
-                                <rect key="frame" x="20" y="118" width="374" height="1150"/>
+                                <rect key="frame" x="0.0" y="118" width="414" height="1150"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1150" id="eA0-w9-Trl"/>
@@ -456,8 +456,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="VXh-4g-Q3G" firstAttribute="top" secondItem="gJ4-a4-rVe" secondAttribute="top" constant="30" id="07O-cv-ghw"/>
-                            <constraint firstItem="gJ4-a4-rVe" firstAttribute="trailing" secondItem="VXh-4g-Q3G" secondAttribute="trailing" constant="20" id="FPc-CV-SpM"/>
-                            <constraint firstItem="VXh-4g-Q3G" firstAttribute="leading" secondItem="gJ4-a4-rVe" secondAttribute="leading" constant="20" id="gr2-xB-OPo"/>
+                            <constraint firstItem="gJ4-a4-rVe" firstAttribute="trailing" secondItem="VXh-4g-Q3G" secondAttribute="trailing" id="FPc-CV-SpM"/>
+                            <constraint firstItem="VXh-4g-Q3G" firstAttribute="leading" secondItem="gJ4-a4-rVe" secondAttribute="leading" id="gr2-xB-OPo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="muM-Jp-Sg7"/>
