@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="1878"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FqF-LX-wjU">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1671"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1705"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FN7-qJ-uzv">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
@@ -221,10 +221,10 @@
                                                 </constraints>
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gPT-3s-HMv">
-                                                <rect key="frame" x="20" y="765" width="374" height="896"/>
+                                                <rect key="frame" x="20" y="765" width="374" height="930"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="896" id="HcK-B6-td4"/>
+                                                    <constraint firstAttribute="height" constant="930" id="HcK-B6-td4"/>
                                                 </constraints>
                                             </tableView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="나의 가전기기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORM-dU-Rp2">
@@ -344,6 +344,9 @@
                                                         <state key="normal" title="다른 시와 비교">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="otherCityBtnClicked:" destination="Tmy-TU-kP7" eventType="touchUpInside" id="kds-YW-5WD"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -394,6 +397,7 @@
                     </view>
                     <size key="freeformSize" width="414" height="1300"/>
                     <connections>
+                        <outlet property="cityLabel" destination="axR-vC-BfQ" id="1zW-nd-ZEO"/>
                         <outlet property="mapView" destination="B40-56-Bha" id="ToE-tj-j4X"/>
                         <outlet property="tableView" destination="Icw-RB-JMt" id="Uay-mt-hsu"/>
                     </connections>

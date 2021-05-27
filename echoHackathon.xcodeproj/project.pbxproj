@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		70A7B2D2265EBD050003ED10 /* CompareTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7B2D0265EBD050003ED10 /* CompareTVC.swift */; };
 		70A7B2D3265EBD050003ED10 /* CompareTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70A7B2D1265EBD050003ED10 /* CompareTVC.xib */; };
+		70A7B2D6265F6BD70003ED10 /* ViewController+makeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7B2D5265F6BD70003ED10 /* ViewController+makeAlert.swift */; };
+		70A7B2DB265F7EAA0003ED10 /* center.json in Resources */ = {isa = PBXBuildFile; fileRef = 70A7B2DA265F7EAA0003ED10 /* center.json */; };
+		70A7B2DE265F7EBF0003ED10 /* avgs.json in Resources */ = {isa = PBXBuildFile; fileRef = 70A7B2DD265F7EBF0003ED10 /* avgs.json */; };
 		70BE63A82657729600F2678F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63A72657729600F2678F /* AppDelegate.swift */; };
 		70BE63AA2657729600F2678F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63A92657729600F2678F /* SceneDelegate.swift */; };
 		70BE63AC2657729600F2678F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63AB2657729600F2678F /* ViewController.swift */; };
@@ -34,6 +37,9 @@
 		6CEAED4FF99B69F5B3BA410E /* Pods-echoHackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-echoHackathon.release.xcconfig"; path = "Target Support Files/Pods-echoHackathon/Pods-echoHackathon.release.xcconfig"; sourceTree = "<group>"; };
 		70A7B2D0265EBD050003ED10 /* CompareTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareTVC.swift; sourceTree = "<group>"; };
 		70A7B2D1265EBD050003ED10 /* CompareTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompareTVC.xib; sourceTree = "<group>"; };
+		70A7B2D5265F6BD70003ED10 /* ViewController+makeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+makeAlert.swift"; sourceTree = "<group>"; };
+		70A7B2DA265F7EAA0003ED10 /* center.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = center.json; sourceTree = "<group>"; };
+		70A7B2DD265F7EBF0003ED10 /* avgs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = avgs.json; sourceTree = "<group>"; };
 		70BE63A42657729600F2678F /* echoHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = echoHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BE63A72657729600F2678F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70BE63A92657729600F2678F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		70A7B2D9265F7E9E0003ED10 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				70A7B2DD265F7EBF0003ED10 /* avgs.json */,
+				70A7B2DA265F7EAA0003ED10 /* center.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		70BE639B2657729600F2678F = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +126,7 @@
 		70BE63C226578E8C00F2678F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				70A7B2D5265F6BD70003ED10 /* ViewController+makeAlert.swift */,
 				70BE63E62657F20E00F2678F /* UIColor.swift */,
 			);
 			path = Extension;
@@ -163,6 +179,7 @@
 		70BE63D42657977F00F2678F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				70A7B2D9265F7E9E0003ED10 /* JSON */,
 				70BE63D52657979A00F2678F /* Font */,
 				70BE63C226578E8C00F2678F /* Extension */,
 			);
@@ -260,11 +277,13 @@
 				70BE63DB2657983B00F2678F /* Font Awesome 5 Free-Regular-400.otf in Resources */,
 				70BE63B42657729900F2678F /* LaunchScreen.storyboard in Resources */,
 				70BE63CD2657915300F2678F /* ModeCVC.xib in Resources */,
+				70A7B2DB265F7EAA0003ED10 /* center.json in Resources */,
 				70BE63D92657983B00F2678F /* Font Awesome 5 Free-Solid-900.otf in Resources */,
 				70BE63B12657729900F2678F /* Assets.xcassets in Resources */,
 				70BE63DA2657983B00F2678F /* Font Awesome 5 Brands-Regular-400.otf in Resources */,
 				70BE63AF2657729600F2678F /* Main.storyboard in Resources */,
 				70A7B2D3265EBD050003ED10 /* CompareTVC.xib in Resources */,
+				70A7B2DE265F7EBF0003ED10 /* avgs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70BE63AC2657729600F2678F /* ViewController.swift in Sources */,
+				70A7B2D6265F6BD70003ED10 /* ViewController+makeAlert.swift in Sources */,
 				70BE63DF2657A29A00F2678F /* ElectronicModel.swift in Sources */,
 				70BE63CC2657915300F2678F /* ModeCVC.swift in Sources */,
 				70BE63A82657729600F2678F /* AppDelegate.swift in Sources */,
