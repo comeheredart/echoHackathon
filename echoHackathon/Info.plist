@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string></string>
+	<string>정보를 얻어오기 위해 현재 위치를 항상 조회하는 것에 동의하십니까?</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>정보를 얻어오기 위해 현재 위치를 앱 실행중 조회하는 것에 동의하십니까?</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Font Awesome 5 Free-Solid-900.otf</string>
