@@ -12,6 +12,9 @@
 		70A7B2D6265F6BD70003ED10 /* ViewController+makeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7B2D5265F6BD70003ED10 /* ViewController+makeAlert.swift */; };
 		70A7B2DB265F7EAA0003ED10 /* center.json in Resources */ = {isa = PBXBuildFile; fileRef = 70A7B2DA265F7EAA0003ED10 /* center.json */; };
 		70A7B2DE265F7EBF0003ED10 /* avgs.json in Resources */ = {isa = PBXBuildFile; fileRef = 70A7B2DD265F7EBF0003ED10 /* avgs.json */; };
+		70A7B2E5265F98A30003ED10 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7B2E4265F98A20003ED10 /* DonateViewController.swift */; };
+		70A7B2E9265F99EB0003ED10 /* DonateTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7B2E7265F99EB0003ED10 /* DonateTVC.swift */; };
+		70A7B2EA265F99EB0003ED10 /* DonateTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70A7B2E8265F99EB0003ED10 /* DonateTVC.xib */; };
 		70BE63A82657729600F2678F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63A72657729600F2678F /* AppDelegate.swift */; };
 		70BE63AA2657729600F2678F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63A92657729600F2678F /* SceneDelegate.swift */; };
 		70BE63AC2657729600F2678F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BE63AB2657729600F2678F /* ViewController.swift */; };
@@ -40,6 +43,9 @@
 		70A7B2D5265F6BD70003ED10 /* ViewController+makeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+makeAlert.swift"; sourceTree = "<group>"; };
 		70A7B2DA265F7EAA0003ED10 /* center.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = center.json; sourceTree = "<group>"; };
 		70A7B2DD265F7EBF0003ED10 /* avgs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = avgs.json; sourceTree = "<group>"; };
+		70A7B2E4265F98A20003ED10 /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
+		70A7B2E7265F99EB0003ED10 /* DonateTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateTVC.swift; sourceTree = "<group>"; };
+		70A7B2E8265F99EB0003ED10 /* DonateTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonateTVC.xib; sourceTree = "<group>"; };
 		70BE63A42657729600F2678F /* echoHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = echoHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BE63A72657729600F2678F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70BE63A92657729600F2678F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 			children = (
 				70BE63DD2657A27700F2678F /* Model */,
 				70BE63AD2657729600F2678F /* Main.storyboard */,
+				70A7B2E4265F98A20003ED10 /* DonateViewController.swift */,
 				70BE63C826578EC100F2678F /* VC */,
 			);
 			path = Sources;
@@ -172,6 +179,8 @@
 				70BE63D02657917F00F2678F /* ElectronicTVC.xib */,
 				70A7B2D0265EBD050003ED10 /* CompareTVC.swift */,
 				70A7B2D1265EBD050003ED10 /* CompareTVC.xib */,
+				70A7B2E7265F99EB0003ED10 /* DonateTVC.swift */,
+				70A7B2E8265F99EB0003ED10 /* DonateTVC.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -275,6 +284,7 @@
 			files = (
 				70BE63D22657917F00F2678F /* ElectronicTVC.xib in Resources */,
 				70BE63DB2657983B00F2678F /* Font Awesome 5 Free-Regular-400.otf in Resources */,
+				70A7B2EA265F99EB0003ED10 /* DonateTVC.xib in Resources */,
 				70BE63B42657729900F2678F /* LaunchScreen.storyboard in Resources */,
 				70BE63CD2657915300F2678F /* ModeCVC.xib in Resources */,
 				70A7B2DB265F7EAA0003ED10 /* center.json in Resources */,
@@ -336,11 +346,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70A7B2E9265F99EB0003ED10 /* DonateTVC.swift in Sources */,
 				70BE63AC2657729600F2678F /* ViewController.swift in Sources */,
 				70A7B2D6265F6BD70003ED10 /* ViewController+makeAlert.swift in Sources */,
 				70BE63DF2657A29A00F2678F /* ElectronicModel.swift in Sources */,
 				70BE63CC2657915300F2678F /* ModeCVC.swift in Sources */,
 				70BE63A82657729600F2678F /* AppDelegate.swift in Sources */,
+				70A7B2E5265F98A30003ED10 /* DonateViewController.swift in Sources */,
 				70BE63AA2657729600F2678F /* SceneDelegate.swift in Sources */,
 				70BE63E32657D7C500F2678F /* ModeModel.swift in Sources */,
 				70A7B2D2265EBD050003ED10 /* CompareTVC.swift in Sources */,
