@@ -8,6 +8,10 @@
 	<string>정보를 얻어오기 위해 현재 위치를 앱 실행중 조회하는 것에 동의하십니까?</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>THEmpgtM_U.otf</string>
+		<string>THEmpgtR.otf</string>
+		<string>THEmpgtEB_U.otf</string>
+		<string>THEmpgtL_U.otf</string>
 		<string>Font Awesome 5 Free-Solid-900.otf</string>
 		<string>Font Awesome 5 Brands-Regular-400.otf</string>
 		<string>Font Awesome 5 Free-Regular-400.otf</string>

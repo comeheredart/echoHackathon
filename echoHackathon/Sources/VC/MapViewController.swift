@@ -15,6 +15,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var cityLabel: UILabel!
     @IBOutlet var segmentControl: UISegmentedControl!
+    @IBOutlet var gradeView: UIView!
+    @IBOutlet var rotateView: UIView!
     
     //MARK: Variables
     var locationManager: CLLocationManager!
@@ -35,14 +37,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var topGoodValArr = [5, 7, 4]
     var topBadValArr = [84, 75, 91]
     
+    
     //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configure()
         
         segmentControl.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
         
         tableViewSetting()
         locationSetting()
+
         
         addMarker()
         
@@ -53,6 +59,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     func configure() {
         
+        gradeView.clipsToBounds = true
+        gradeView.layer.cornerRadius = 20
+        
+        rotateView.transform = CGAffineTransform(rotationAngle: .pi / 4)
     }
     
     func tableViewSetting() {
