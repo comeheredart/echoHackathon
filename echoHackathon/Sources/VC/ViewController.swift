@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     var modeModels = [ModeModel]()
     var kwhList: [Int] = [0, 0, 0, 0, 0]
     var offList = [Int]()
+    var sumOfEnergy:Double = 0
+    var baseTax:Int = 0
 
     
     //MARK:- Constraint Part
@@ -57,10 +59,10 @@ class ViewController: UIViewController {
             return
         }
         
-        nextVC.sumValue = Int(self.ElectricSumLabel.text!)!
-        nextVC.Co2Value = Double(self.Co2Label.text!)!
-        nextVC.wonValue = Int(self.wonLabel.text!)!
-        
+//        nextVC.sumValue = Int(self.ElectricSumLabel.text!)!
+//        nextVC.Co2Value = Double(self.Co2Label.text!)!
+//        nextVC.wonValue = Int(self.wonLabel.text!)!
+//        
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
@@ -103,24 +105,22 @@ class ViewController: UIViewController {
         
         electicModels.append(contentsOf: [
             
-            ElectronicModel(name: "샘성 냉장고", perSecond: 30, isOn: false),
-            ElectronicModel(name: "엘지 티비", perSecond: 40, isOn: false),
-            ElectronicModel(name: "김치냉장고", perSecond: 50, isOn: true),
-            ElectronicModel(name: "휘센 에어컨", perSecond: 80, isOn: false),
-            ElectronicModel(name: "내 컴퓨터", perSecond: 30, isOn: false),
+            ElectronicModel(name: "샘성 냉장고", perSecond: 1, isOn: false),
+            ElectronicModel(name: "엘지 티비", perSecond: 1, isOn: false),
+            ElectronicModel(name: "김치냉장고", perSecond: 1, isOn: true),
+            ElectronicModel(name: "휘센 에어컨", perSecond: 1, isOn: false),
+            ElectronicModel(name: "내 컴퓨터", perSecond: 1, isOn: false),
 
-        
         ])
         
         modeModels.append(contentsOf: [
             
-            ModeModel(modeName: "외출 모드", modeDescription: "외출할 때 불끄기!", deviceOff: [1, 3, 4]),
+            ModeModel(modeName: "출근 모드", modeDescription: "외출할 때 불끄기!", deviceOff: [1, 3, 4]),
             ModeModel(modeName: "취침 모드", modeDescription: "잠자기 전 절전모드 온!", deviceOff: [1, 3, 4]),
             ModeModel(modeName: "절전 모드", modeDescription: "필요없는 가전은 끄자!", deviceOff: [1, 2, 3, 4]),
             ModeModel(modeName: "지구 사랑 모드", modeDescription: "사랑아 지구해~", deviceOff: [0, 1, 2, 3, 4])
         
         ])
-        
         
     }
     
@@ -136,8 +136,41 @@ class ViewController: UIViewController {
         
         ElectricSumLabel.text = "\(sum)"
         Co2Label.text = "\(round(Double(sum) / 0.45))"
-        wonLabel.text = "\(sum * 100)"
-        //1당 0.45 , 100원
+        
+        let wonVal = calcTax(eps: sum) + Double(baseTax)
+        wonLabel.text = "\(Int(wonVal))"
+        //1당 0.45
+    }
+    
+    func calcTax(eps:Int) -> Double{
+        let date:Date = Date()
+        let month: String
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM"
+        month = formatter.string(from: date)
+        
+        var standard1:Int = 0
+        var standard2:Int = 0
+        
+        sumOfEnergy += Double(eps)
+        
+        if(month == "7" || month == "8"){
+            standard1 = 300
+            standard2 = 450
+        }else{
+            standard1 = 200
+            standard2 = 400
+        }
+        if(Int(sumOfEnergy) <= standard1){
+            baseTax = 910
+            return Double(eps) * 93.3
+        }else if(Int(sumOfEnergy) > standard1 && Int(sumOfEnergy) <= standard2){
+            baseTax = 1600
+            return Double(eps) * 187.9
+        }else{
+            baseTax = 7300
+            return Double(eps) * 280.6
+        }
     }
     
     

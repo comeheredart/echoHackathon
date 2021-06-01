@@ -23,27 +23,43 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNv-tm-RSr">
                                 <rect key="frame" x="15" y="15" width="353" height="235"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="석탄 화력 발전 멈춰!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzG-k8-wMx">
-                                        <rect key="frame" x="16" y="50" width="221" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="섭타이틀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqh-Kn-jQ6">
-                                        <rect key="frame" x="16" y="92" width="63" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grand" translatesAutoresizingMaskIntoConstraints="NO" id="biV-Ah-TgX">
+                                        <rect key="frame" x="-10" y="-5" width="373" height="245"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="화력 발전 비율을 낮춰줘 .." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqh-Kn-jQ6">
+                                        <rect key="frame" x="73" y="147" width="270" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="ygx-YQ-YJA"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstItem="biV-Ah-TgX" firstAttribute="top" secondItem="NNv-tm-RSr" secondAttribute="top" constant="-5" id="HJb-YG-ZdS"/>
+                                    <constraint firstAttribute="trailing" secondItem="mqh-Kn-jQ6" secondAttribute="trailing" constant="10" id="RpH-Yh-2o8"/>
+                                    <constraint firstAttribute="trailing" secondItem="biV-Ah-TgX" secondAttribute="trailing" constant="-10" id="eGQ-sZ-K3B"/>
+                                    <constraint firstItem="biV-Ah-TgX" firstAttribute="leading" secondItem="NNv-tm-RSr" secondAttribute="leading" constant="-10" id="i90-pd-zmz"/>
+                                    <constraint firstAttribute="bottom" secondItem="biV-Ah-TgX" secondAttribute="bottom" constant="-5" id="tXt-ld-aVp"/>
+                                    <constraint firstItem="mqh-Kn-jQ6" firstAttribute="top" secondItem="NNv-tm-RSr" secondAttribute="top" constant="147" id="xwF-jE-gV6"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HwR-OR-8eo">
-                                <rect key="frame" x="119" y="200" width="264" height="37"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <rect key="frame" x="119" y="190" width="264" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="석탄 화력 발전 멈춰!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzG-k8-wMx">
+                                        <rect key="frame" x="74.5" y="9" width="181.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gzG-k8-wMx" secondAttribute="trailing" constant="8" id="CUv-kt-HgJ"/>
                                     <constraint firstAttribute="width" constant="264" id="eIr-8I-f5v"/>
-                                    <constraint firstAttribute="height" constant="37" id="n9v-ll-32N"/>
+                                    <constraint firstAttribute="height" constant="45" id="n9v-ll-32N"/>
+                                    <constraint firstItem="gzG-k8-wMx" firstAttribute="centerY" secondItem="HwR-OR-8eo" secondAttribute="centerY" id="y4m-XD-5lv"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -52,7 +68,7 @@
                             <constraint firstItem="NNv-tm-RSr" firstAttribute="top" secondItem="XjL-tf-sHM" secondAttribute="top" constant="15" id="4Qf-EM-Okx"/>
                             <constraint firstAttribute="bottom" secondItem="NNv-tm-RSr" secondAttribute="bottom" constant="10" id="DxM-GO-JRN"/>
                             <constraint firstAttribute="trailing" secondItem="HwR-OR-8eo" secondAttribute="trailing" constant="15" id="F2u-d5-FgM"/>
-                            <constraint firstItem="HwR-OR-8eo" firstAttribute="top" secondItem="XjL-tf-sHM" secondAttribute="top" constant="200" id="m9W-g2-8He"/>
+                            <constraint firstItem="HwR-OR-8eo" firstAttribute="top" secondItem="XjL-tf-sHM" secondAttribute="top" constant="190" id="m9W-g2-8He"/>
                             <constraint firstAttribute="trailing" secondItem="NNv-tm-RSr" secondAttribute="trailing" constant="30" id="oPC-Xi-oqq"/>
                             <constraint firstItem="NNv-tm-RSr" firstAttribute="leading" secondItem="XjL-tf-sHM" secondAttribute="leading" constant="15" id="xYi-Uh-Dp7"/>
                         </constraints>
@@ -67,6 +83,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="imageview" destination="biV-Ah-TgX" id="Qva-c2-4sp"/>
                 <outlet property="subtitle" destination="mqh-Kn-jQ6" id="9Dw-0f-Oag"/>
                 <outlet property="title" destination="gzG-k8-wMx" id="t8s-FH-RPn"/>
                 <outlet property="view" destination="NNv-tm-RSr" id="XCH-GZ-Ylu"/>
@@ -75,11 +92,9 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="grand" width="590" height="394"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

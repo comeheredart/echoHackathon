@@ -12,7 +12,8 @@ class DonateTVC: UITableViewCell {
     @IBOutlet var view: UIView!
     @IBOutlet var title: UILabel!
     @IBOutlet var subtitle: UILabel!
-    //@IBOutlet var imageview: UIImageView!
+    @IBOutlet var imageview: UIImageView!
+    
     
     static var Nib = UINib(nibName: "DonateTVC", bundle: nil)
     static let identifier = "DonateTVC"

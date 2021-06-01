@@ -17,6 +17,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var segmentControl: UISegmentedControl!
     @IBOutlet var gradeView: UIView!
     @IBOutlet var rotateView: UIView!
+    @IBOutlet var morelessLabel: UILabel!
+    @IBOutlet var morelessLabel2: UILabel!
+    
+    @IBOutlet var gradeLabel: UILabel!
+    @IBOutlet var cityLabel2: UILabel!
+    @IBOutlet var treeLabel: UILabel!
+    @IBOutlet var co2Label: UILabel!
     
     //MARK: Variables
     var locationManager: CLLocationManager!
@@ -32,8 +39,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var cityDic : [String: String] = ["Seoul":"서울특별시", "Gwangju":"광주광역시", "Incheon":"인천광역시", "Daegu":"대구광역시","Ulsan":"울산광역시","Daejeon":"대전광역시","Busan":"부산광역시","Gyeonggi-do":"경기도", "Gangwon-do":"강원도", "Chungcheongnam-do":"충청남도","Chung-cheong bukdo":"충청북도","Gyeongsangbuk-do":"경상북도","Gyeongsangnam-do":"경상남도","Jeollabuk-do":"전라북도", "Jeollanam-do":"전라남도", "Jeju-do":"제주도"]
     
     var cityAvg = ["Seoul":212, "Incheon": 198] //22439 //21449
-    var goodEx = [170, 0000, 0000] //전기세랑 탄소 배출량 계산 ..
-    var badEx = [250, 0000, 0000]
+    var goodEx = [62, 5580, 26.288]
+    var badEx = [150, 13950, 63.6]
     var topGoodValArr = [5, 7, 4]
     var topBadValArr = [84, 75, 91]
     
@@ -96,7 +103,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 marker.mapView = mapView
                 
                 marker.touchHandler = { (overlay: NMFOverlay) -> Bool in
-                    print("마커 터치")
+                    
+                    self.cityLabel.text = "인천광역시"
+                    self.cityLabel2.text = "인천시"
+                
                     return true
                 }
             }
@@ -146,8 +156,33 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         })
     }
     
+    
+    
     @objc func segmentChanged() {
         tableView.reloadData()
+        
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            gradeLabel.textColor = #colorLiteral(red: 0.4078431373, green: 0.8705882353, blue: 0.4862745098, alpha: 1)
+            gradeLabel.text = "A+"
+            treeLabel.text = "42297 그루"
+            co2Label.text = "63446 톤"
+            morelessLabel.text = "심는 효과"
+            morelessLabel2.text = "감축"
+            break
+            
+        case 1:
+            gradeLabel.textColor = #colorLiteral(red: 0.8392156863, green: 0.2117647059, blue: 0.2196078431, alpha: 1)
+            gradeLabel.text = "C+"
+            treeLabel.text = "59002 그루"
+            co2Label.text = "88503 톤"
+            morelessLabel.text = "뽑는 효과"
+            morelessLabel2.text = "증가"
+            break
+            
+        default:
+            break
+        }
     }
     
     
@@ -170,24 +205,28 @@ extension MapViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CompareTVC.identifier) as? CompareTVC else { return UITableViewCell() }
         
         cell.titleLabel.text = titleArray[indexPath.row]
-        //cell.useLabel.text = "\(valueArray[indexPath.row])" //이걸 good 이나 bad 로 바꾸기
+
         
         let idx = indexPath.row
         
         switch segmentControl.selectedSegmentIndex {
         
         case 0:
-            cell.topView.backgroundColor = .green
+            cell.topView.backgroundColor = #colorLiteral(red: 0.4078431373, green: 0.8705882353, blue: 0.4862745098, alpha: 1)
+            cell.nothingLabel.textColor = .black
             cell.morelessLabel.text = "적게 소비"
             cell.useLabel.text = "\(goodEx[idx]) \(unitArray[idx])"
             cell.topValueLabel.text = "\(topGoodValArr[idx]) %"
+            cell.topValueLabel.textColor = .black
             break
             
         case 1:
-            cell.topView.backgroundColor = .red
+            cell.topView.backgroundColor = #colorLiteral(red: 0.8392156863, green: 0.2117647059, blue: 0.2196078431, alpha: 1)
+            cell.nothingLabel.textColor = .white
             cell.morelessLabel.text = "많이 소비"
             cell.useLabel.text = "\(badEx[indexPath.row]) \(unitArray[idx])"
             cell.topValueLabel.text = "\(topBadValArr[indexPath.row]) %"
+            cell.topValueLabel.textColor = .white
             break
             
         default:

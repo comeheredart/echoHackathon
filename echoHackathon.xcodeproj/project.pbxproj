@@ -11,6 +11,7 @@
 		7076E8E526664D08003FC709 /* THEmpgtEB_U.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7076E8E426664D08003FC709 /* THEmpgtEB_U.otf */; };
 		7076E8E826664D10003FC709 /* THEmpgtR.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7076E8E726664D10003FC709 /* THEmpgtR.otf */; };
 		7076E8EB26664D1D003FC709 /* THEmpgtM_U.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7076E8EA26664D1D003FC709 /* THEmpgtM_U.otf */; };
+		7076E8EE26668C3E003FC709 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7076E8ED26668C3C003FC709 /* WebViewController.swift */; };
 		70A7B2D2265EBD050003ED10 /* CompareTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7B2D0265EBD050003ED10 /* CompareTVC.swift */; };
 		70A7B2D3265EBD050003ED10 /* CompareTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70A7B2D1265EBD050003ED10 /* CompareTVC.xib */; };
 		70A7B2D6265F6BD70003ED10 /* ViewController+makeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7B2D5265F6BD70003ED10 /* ViewController+makeAlert.swift */; };
@@ -46,6 +47,7 @@
 		7076E8E426664D08003FC709 /* THEmpgtEB_U.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEmpgtEB_U.otf; sourceTree = "<group>"; };
 		7076E8E726664D10003FC709 /* THEmpgtR.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEmpgtR.otf; sourceTree = "<group>"; };
 		7076E8EA26664D1D003FC709 /* THEmpgtM_U.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = THEmpgtM_U.otf; sourceTree = "<group>"; };
+		7076E8ED26668C3C003FC709 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		70A7B2D0265EBD050003ED10 /* CompareTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareTVC.swift; sourceTree = "<group>"; };
 		70A7B2D1265EBD050003ED10 /* CompareTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompareTVC.xib; sourceTree = "<group>"; };
 		70A7B2D5265F6BD70003ED10 /* ViewController+makeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+makeAlert.swift"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				70A7B2D1265EBD050003ED10 /* CompareTVC.xib */,
 				70A7B2E7265F99EB0003ED10 /* DonateTVC.swift */,
 				70A7B2E8265F99EB0003ED10 /* DonateTVC.xib */,
+				7076E8ED26668C3C003FC709 /* WebViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				70BE63C026578E2200F2678F /* NavigationViewController.swift in Sources */,
 				70BE63D12657917F00F2678F /* ElectronicTVC.swift in Sources */,
 				70BE63BD265788D000F2678F /* MapViewController.swift in Sources */,
+				7076E8EE26668C3E003FC709 /* WebViewController.swift in Sources */,
 				70BE63E72657F20E00F2678F /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
