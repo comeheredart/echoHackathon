@@ -332,17 +332,17 @@
             <objects>
                 <viewController storyboardIdentifier="MapViewController" id="Tmy-TU-kP7" customClass="MapViewController" customModule="echoHackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IxI-PP-2jj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpT-aK-GbV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1222"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1922"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4N-Lp-NUE">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1222"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1922"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6p-Bk-lD2" userLabel="ContentView">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1205"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1922"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B40-56-Bha" customClass="NMFMapView">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
@@ -352,7 +352,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울특별시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axR-vC-BfQ">
-                                                        <rect key="frame" x="30" y="380" width="117" height="40"/>
+                                                        <rect key="frame" x="30" y="420" width="117" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Rh2-wp-VNI"/>
                                                         </constraints>
@@ -361,14 +361,14 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Icw-RB-JMt">
-                                                        <rect key="frame" x="10" y="435" width="394" height="730"/>
+                                                        <rect key="frame" x="10" y="480" width="394" height="730"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="730" id="gco-Kf-tdy"/>
                                                         </constraints>
                                                     </tableView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yn2-HG-U5H">
-                                                        <rect key="frame" x="313" y="385" width="86" height="30"/>
+                                                        <rect key="frame" x="313" y="425" width="86" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="다른 시와 비교">
@@ -378,17 +378,33 @@
                                                             <action selector="otherCityBtnClicked:" destination="Tmy-TU-kP7" eventType="touchUpInside" id="kds-YW-5WD"/>
                                                         </connections>
                                                     </button>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="h1M-ra-5El">
+                                                        <rect key="frame" x="30" y="370" width="354" height="32"/>
+                                                        <segments>
+                                                            <segment title="좋은 예"/>
+                                                            <segment title="나쁜 예"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBD-BJ-zWj">
+                                                        <rect key="frame" x="186" y="1241" width="42" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="h1M-ra-5El" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" constant="30" id="4ea-dO-94P"/>
                                                     <constraint firstItem="Icw-RB-JMt" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" constant="10" id="6fz-dL-e6Z"/>
                                                     <constraint firstItem="axR-vC-BfQ" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" constant="30" id="6iW-1J-ZUV"/>
                                                     <constraint firstItem="yn2-HG-U5H" firstAttribute="centerY" secondItem="axR-vC-BfQ" secondAttribute="centerY" id="8Bl-4W-IoP"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Icw-RB-JMt" secondAttribute="bottom" constant="40" id="H44-8G-nxT"/>
                                                     <constraint firstItem="B40-56-Bha" firstAttribute="leading" secondItem="V6p-Bk-lD2" secondAttribute="leading" id="RQe-UI-YYQ"/>
-                                                    <constraint firstItem="Icw-RB-JMt" firstAttribute="top" secondItem="axR-vC-BfQ" secondAttribute="bottom" constant="15" id="XJw-42-1xZ"/>
-                                                    <constraint firstItem="axR-vC-BfQ" firstAttribute="top" secondItem="B40-56-Bha" secondAttribute="bottom" constant="30" id="a7m-9w-wf6"/>
+                                                    <constraint firstItem="Icw-RB-JMt" firstAttribute="top" secondItem="axR-vC-BfQ" secondAttribute="bottom" constant="20" id="XJw-42-1xZ"/>
+                                                    <constraint firstItem="axR-vC-BfQ" firstAttribute="top" secondItem="B40-56-Bha" secondAttribute="bottom" constant="70" id="a7m-9w-wf6"/>
+                                                    <constraint firstItem="h1M-ra-5El" firstAttribute="top" secondItem="B40-56-Bha" secondAttribute="bottom" constant="20" id="dSO-vd-Qdy"/>
                                                     <constraint firstAttribute="trailing" secondItem="Icw-RB-JMt" secondAttribute="trailing" constant="10" id="fFX-J7-f7R"/>
+                                                    <constraint firstAttribute="trailing" secondItem="h1M-ra-5El" secondAttribute="trailing" constant="30" id="k3u-0N-1VL"/>
                                                     <constraint firstItem="B40-56-Bha" firstAttribute="top" secondItem="V6p-Bk-lD2" secondAttribute="top" id="vSF-eJ-7vT"/>
                                                     <constraint firstAttribute="trailing" secondItem="yn2-HG-U5H" secondAttribute="trailing" constant="15" id="vh0-K8-a4r"/>
                                                     <constraint firstAttribute="trailing" secondItem="B40-56-Bha" secondAttribute="trailing" id="xnV-Na-A8O"/>
@@ -425,10 +441,11 @@
                             <constraint firstItem="1Xt-dp-sGG" firstAttribute="trailing" secondItem="hpT-aK-GbV" secondAttribute="trailing" id="mG6-jq-HVc"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="414" height="1300"/>
+                    <size key="freeformSize" width="414" height="2000"/>
                     <connections>
                         <outlet property="cityLabel" destination="axR-vC-BfQ" id="1zW-nd-ZEO"/>
                         <outlet property="mapView" destination="B40-56-Bha" id="ToE-tj-j4X"/>
+                        <outlet property="segmentControl" destination="h1M-ra-5El" id="YI5-Ww-XdR"/>
                         <outlet property="tableView" destination="Icw-RB-JMt" id="Uay-mt-hsu"/>
                     </connections>
                 </viewController>
